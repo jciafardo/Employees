@@ -1,5 +1,8 @@
 package com.techelevator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Application {
 
     /**
@@ -9,7 +12,14 @@ public class Application {
     public static void main(String[] args) {
         Application app = new Application();
         app.run();
-    }
+
+        //create variable for departments
+        List<Department> departments = new ArrayList<>();
+
+
+
+
+    }//end of main
 
     private void run() {
         // create some departments
@@ -39,6 +49,7 @@ public class Application {
      * Create departments and add them to the collection of departments
      */
     private void createDepartments() {
+
     }
 
     /**
