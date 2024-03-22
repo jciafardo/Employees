@@ -1,12 +1,18 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 
 public class Application {
 
     //create variable for departments
     List<Department> departments = new ArrayList<>();
+
+    //create a variable for projects
+    Map <String, Project> projects = new HashMap<>();
+
 
     /**
      * The main entry point in the application
@@ -91,6 +97,15 @@ public class Application {
      * Create the 'TEams' project.
      */
     private void createTeamsProject() {
+        Project newProject1 = new Project ("TEams", "Project Management Software", "10/10/2020", "11/10/2020");
+        projects.put("TEams", newProject1);
+
+        //read in all employees
+        for ()
+        //if in enginnering, add to teamMembers on project
+
+        //add project to project map
+
 
     }
 
