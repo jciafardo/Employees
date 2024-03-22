@@ -131,13 +131,30 @@ public class Application {
     private void createTeamsProject() {
         Project newProject1 = new Project ("TEams", "Project Management Software", "10/10/2020", "11/10/2020");
         projects.put("TEams", newProject1);
+        //list of enginnering employees
+        List <Employee> enginneringTeam = new ArrayList<>();
 
         //read in all employees
+<<<<<<< HEAD
 
         //if in enginnering, add to teamMembers on project
 
         //add project to project map
 
+=======
+        for (Employee currentEmployee : employees) {
+            //if in enginnering, add to teamMembers on project
+            String deparmentName = String.valueOf(currentEmployee.getDepartment());
+            if ((deparmentName) == "Engineering") {
+                enginneringTeam.add(currentEmployee);
+            }
+            //set engineering team as team for project
+            newProject1.setTeamMembers(enginneringTeam);
+
+            //add project to project map
+            projects.put("TEams", newProject1);
+        }
+>>>>>>> bdf9d4ee43837024c7d227af98496c23249bf46a
 
     }
 
@@ -145,6 +162,25 @@ public class Application {
      * Create the 'Marketing Landing Page' project.
      */
     private void createLandingPageProject() {
+            Project newProject2 = new Project ("Marketing Landing Page", "Lead Capture Landing Page for Marketing",
+                    "10/10/2020", "10/17/2020");
+            projects.put("Marketing Landing Page", newProject2);
+            //list of marketing employees
+            List <Employee> marketingTeam = new ArrayList<>();
+
+            //read in all employees
+            for (Employee currentEmployee : employees){
+                //if in marketing, add to teamMembers on project
+                String deparmentName = String.valueOf(currentEmployee.getDepartment());
+                if((deparmentName) == "Marketing"){
+                    marketingTeam.add(currentEmployee);
+                }
+                //set marketing team as team for project
+                newProject2.setTeamMembers(marketingTeam);
+
+                //add project to project map
+                projects.put("Marketing Landing Page", newProject2);
+        }
 
     }
 
@@ -153,6 +189,15 @@ public class Application {
      */
     private void printProjectsReport() {
         System.out.println("\n------------- PROJECTS ------------------------------");
+        //loop through projects map
+        for (Map.Entry <String, Project> entry : projects.entrySet()){
+            String key = entry.getKey();
+            Project value = entry.getValue();
+            int numberOfEmployees = value.getTeamMembers().size();
+                System.out.println(key + ": " + numberOfEmployees);
+
+            }
+
 
     }
 
