@@ -135,17 +135,16 @@ public class Application {
         List <Employee> enginneringTeam = new ArrayList<>();
 
         //read in all employees
-<<<<<<< HEAD
+
 
         //if in enginnering, add to teamMembers on project
 
         //add project to project map
 
-=======
         for (Employee currentEmployee : employees) {
             //if in enginnering, add to teamMembers on project
-            String deparmentName = String.valueOf(currentEmployee.getDepartment());
-            if ((deparmentName) == "Engineering") {
+
+            if ((currentEmployee.getDepartment().getName()).equalsIgnoreCase("Engineering")) {
                 enginneringTeam.add(currentEmployee);
             }
             //set engineering team as team for project
@@ -154,7 +153,7 @@ public class Application {
             //add project to project map
             projects.put("TEams", newProject1);
         }
->>>>>>> bdf9d4ee43837024c7d227af98496c23249bf46a
+
 
     }
 
@@ -171,8 +170,8 @@ public class Application {
             //read in all employees
             for (Employee currentEmployee : employees){
                 //if in marketing, add to teamMembers on project
-                String deparmentName = String.valueOf(currentEmployee.getDepartment());
-                if((deparmentName) == "Marketing"){
+
+                if((currentEmployee.getDepartment().getName()).equalsIgnoreCase("Marketing")){
                     marketingTeam.add(currentEmployee);
                 }
                 //set marketing team as team for project
