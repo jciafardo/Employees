@@ -22,6 +22,24 @@ public class Employee {
         this.email = email;
         this.department = department;
         this.hireDate = hireDate;
+        this.salary = START_SALARY;
     }
+
+    public Employee(){
+
+    }
+
+    public String getFullName(){
+        String fullName = lastName + ", " + firstName;
+        return fullName;
+    }
+
+    public void raiseSalary(double percent){
+        double raise = (percent / 100) * salary;
+        salary += raise;
+    }
+
+
+
 
 }
