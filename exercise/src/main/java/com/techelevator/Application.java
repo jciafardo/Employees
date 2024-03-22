@@ -5,16 +5,21 @@ import java.util.List;
 
 public class Application {
 
+    //create variable for departments
+    List<Department> departments = new ArrayList<>();
+
     /**
      * The main entry point in the application
      * @param args
      */
     public static void main(String[] args) {
+
+
+
         Application app = new Application();
         app.run();
 
-        //create variable for departments
-        List<Department> departments = new ArrayList<>();
+
 
 
 
@@ -50,6 +55,10 @@ public class Application {
      */
     private void createDepartments() {
 
+        departments.add(new Department(1, "Marketing"));
+        departments.add(new Department(2, "Sales"));
+        departments.add(new Department(3, "Engineering"));
+
     }
 
     /**
@@ -57,6 +66,9 @@ public class Application {
      */
     private void printDepartments() {
         System.out.println("------------- DEPARTMENTS ------------------------------");
+        for(Department currentDepartment: departments){
+            System.out.println(currentDepartment.getName());
+        }
 
     }
 
