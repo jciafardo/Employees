@@ -94,9 +94,14 @@ public class Application {
 
         Employee employee2 = new Employee(2, "Angie", "Smith", "asmith@teams.com", departments.get(2), "08/21/2020");
 
+
+
+
         Employee employee3 = new Employee(3, "Margaret", "Thompson", "mthompson@teams.com", departments.get(0), "08/21/2020");
 
-
+        employees.add(employee1);
+        employees.add(employee2);
+        employees.add(employee3);
 
 
 
@@ -105,11 +110,18 @@ public class Application {
     }
 
 
+
+
     /**
      * Print out each employee in the collection.
      */
     private void printEmployees() {
+        employees.get(1).raiseSalary(10);
         System.out.println("\n------------- EMPLOYEES ------------------------------");
+
+        for(Employee employee: employees){
+            System.out.println(employee.getLastName() + ", " + employee.getEmail() + " " + employee.getSalary() + " " + employee.getDepartment());
+        }
 
     }
 
@@ -121,7 +133,7 @@ public class Application {
         projects.put("TEams", newProject1);
 
         //read in all employees
-        for ()
+
         //if in enginnering, add to teamMembers on project
 
         //add project to project map
