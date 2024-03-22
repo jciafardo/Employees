@@ -83,16 +83,21 @@ public class Application {
         employee1.setLastName("Johnson");
         employee1.setEmail("djohnson@teams.com");
         employee1.setSalary(60_000);
-        // employee1.setDepartment();
         employee1.setHireDate("08/21/2020");
+        employee1.setDepartment(departments.get(2));
+
+        Employee employee2 = new Employee(2, "Angie", "Smith", "asmith@teams.com", departments.get(2), "08/21/2020");
+
+        Employee employee3 = new Employee(3, "Margaret", "Thompson", "mthompson@teams.com", departments.get(0), "08/21/2020");
 
 
 
-        Employee employee2 = new Employee();
-        Employee employee3 = new Employee();
+
+
 
 
     }
+
 
     /**
      * Print out each employee in the collection.
