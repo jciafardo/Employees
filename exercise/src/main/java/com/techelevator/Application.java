@@ -120,7 +120,7 @@ public class Application {
         System.out.println("\n------------- EMPLOYEES ------------------------------");
 
         for(Employee employee: employees){
-            System.out.println(employee.getLastName() + ", " + employee.getEmail() + " " + employee.getSalary() + " " + employee.getDepartment());
+            System.out.println(employee.getLastName() + ", " + employee.getFirstName() + " " + employee.getEmail() + " " + employee.getSalary() + " " + employee.getDepartment().getName());
         }
 
     }
@@ -141,6 +141,10 @@ public class Application {
 
         //add project to project map
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa283be62bcff06a0fcf0b48825afd11312bb669
         for (Employee currentEmployee : employees) {
             //if in enginnering, add to teamMembers on project
 
@@ -182,7 +186,7 @@ public class Application {
         }
 
     }
-
+git
     /**
      * Print out each project in the collection.
      */
