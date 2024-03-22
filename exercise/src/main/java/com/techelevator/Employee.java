@@ -29,6 +29,58 @@ public class Employee {
 
     }
 
+    // getters
+
+    public long getEmployeeId(){
+        return employeeId;
+    }
+    public String getFirstName(){
+        return firstName;
+    }
+    public String getLastName(){
+        return lastName;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+    public double getSalary(){
+        return salary;
+    }
+    public Department getDepartment(){
+        return department;
+    }
+    public String getHireDate(){
+        return hireDate;
+    }
+
+    // setters
+
+    public void setEmployeeId(long employeeId){
+        this.employeeId = employeeId;
+    }
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public void setSalary(double salary){
+        this.salary = salary;
+    }
+
+    public void setDepartment(Department department){
+        this.department = department;
+    }
+    public void setHireDate(String hireDate){
+        this.hireDate = hireDate;
+    }
+
+
+     // use case methods
     public String getFullName(){
         String fullName = lastName + ", " + firstName;
         return fullName;
@@ -38,6 +90,7 @@ public class Employee {
         double raise = (percent / 100) * salary;
         salary += raise;
     }
+
 
 
 
