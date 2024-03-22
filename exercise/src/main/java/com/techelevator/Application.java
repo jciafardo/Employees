@@ -7,16 +7,14 @@ public class Application {
 
     //create variable for departments
     List<Department> departments = new ArrayList<>();
+    List<Employee> employees = new ArrayList<>();
 
     /**
      * The main entry point in the application
      * @param args
      */
-    //create variable for departments
-    List<Department> departments = new ArrayList<>();
 
-    // create variable for employees
-    List<Employee> employees = new ArrayList<>();
+
 
     public static void main(String[] args) {
 
@@ -25,12 +23,6 @@ public class Application {
         Application app = new Application();
         app.run();
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 7de8ce3bbec11d7de12a8ecfb15461139a398cc5
 
 
     }//end of main
