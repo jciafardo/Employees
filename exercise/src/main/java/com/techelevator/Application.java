@@ -9,6 +9,7 @@ public class Application {
 
     //create variable for departments
     List<Department> departments = new ArrayList<>();
+    List<Employee> employees = new ArrayList<>();
 
     //create a variable for projects
     Map <String, Project> projects = new HashMap<>();
@@ -18,15 +19,15 @@ public class Application {
      * The main entry point in the application
      * @param args
      */
+
+
+
     public static void main(String[] args) {
 
 
 
         Application app = new Application();
         app.run();
-
-
-
 
 
 
@@ -82,6 +83,20 @@ public class Application {
      * Create employees and add them to the collection of employees
      */
     private void createEmployees() {
+        Employee employee1 = new Employee();
+        employee1.setEmployeeId(1);
+        employee1.setFirstName("Dean");
+        employee1.setLastName("Johnson");
+        employee1.setEmail("djohnson@teams.com");
+        employee1.setSalary(60_000);
+        // employee1.setDepartment();
+        employee1.setHireDate("08/21/2020");
+
+
+
+        Employee employee2 = new Employee();
+        Employee employee3 = new Employee();
+
 
     }
 
