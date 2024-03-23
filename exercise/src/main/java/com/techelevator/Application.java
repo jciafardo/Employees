@@ -90,14 +90,14 @@ public class Application {
         employee1.setEmail("djohnson@teams.com");
         employee1.setSalary(60_000);
         employee1.setHireDate("08/21/2020");
-        employee1.setDepartment(departments.get(2));
+        employee1.setDepartment(departments.get(getDepartmentIndex("Engineering")));
 
-        Employee employee2 = new Employee(2, "Angie", "Smith", "asmith@teams.com", departments.get(2), "08/21/2020");
-
-
+        Employee employee2 = new Employee(2, "Angie", "Smith", "asmith@teams.com", departments.get(getDepartmentIndex("Engineering")), "08/21/2020");
 
 
-        Employee employee3 = new Employee(3, "Margaret", "Thompson", "mthompson@teams.com", departments.get(0), "08/21/2020");
+
+
+        Employee employee3 = new Employee(3, "Margaret", "Thompson", "mthompson@teams.com", departments.get(getDepartmentIndex("Marketing")), "08/21/2020");
 
         employees.add(employee1);
         employees.add(employee2);
@@ -109,8 +109,16 @@ public class Application {
 
     }
 
-
-
+    // Method to find departments index based on the value EX: getDepartmentIndex("Engineering") >> 2
+    private int getDepartmentIndex(String departmentName){
+        for(int i = 0; i < departments.size(); i++){
+            String department = departments.get(i).getName();
+            if(department.equals(departmentName)){
+                return i;
+            }
+        }
+        return -1;
+    }
 
     /**
      * Print out each employee in the collection.
@@ -141,10 +149,7 @@ public class Application {
 
         //add project to project map
 
-<<<<<<< HEAD
-=======
 
->>>>>>> fa283be62bcff06a0fcf0b48825afd11312bb669
         for (Employee currentEmployee : employees) {
             //if in enginnering, add to teamMembers on project
 
@@ -186,7 +191,7 @@ public class Application {
         }
 
     }
-git
+
     /**
      * Print out each project in the collection.
      */

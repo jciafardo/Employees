@@ -24,4 +24,8 @@ public void setDepartmentId(int departmentId){
 public void setName (String name){
         this.name = name;
 }
+
+// use case methods
+
+
 }//end of class
